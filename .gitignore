@@ -327,3 +327,6 @@ fabric.properties
 
 #Pytest cache folder
 .pytest_cache
+
+#Pycharm idea folder
+.idea
