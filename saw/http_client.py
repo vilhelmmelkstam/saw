@@ -26,7 +26,7 @@ class HTTPClient():
         self.api_key = api_key
         self.simfin_plus = simfin_plus
 
-    def can_make_request():
+    def can_make_request(self):
         """Check rate limit allowance
 
         Checks if HTTPClient is allowed by the rate limiter to make request and handles refilling
@@ -47,6 +47,8 @@ class HTTPClient():
             self.tokens -= 1
             return True
 
+        return False
+
 
     def request(self, endpoint, query=None):
         """Make request to the API
@@ -65,7 +67,7 @@ class HTTPClient():
 
         query_string = "".join(['&%s=%s' % (key, str(value)) for (key, value) in query.items()])
         url = self.api_url + endpoint + "?api-key=" + self.api_key + query_string
-        if can_make_request():
+        if self.can_make_request():
             response = self.session.get(url)
             return response.json()
 
