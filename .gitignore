@@ -175,7 +175,7 @@ dmypy.json
 [Ll]ib
 [Ll]ib64
 [Ll]ocal
-[Ss]cripts
+#[Ss]cripts
 pyvenv.cfg
 pip-selfcheck.json
 
@@ -190,7 +190,7 @@ pip-selfcheck.json
 
 # Project files should be checked into the repository, unless a significant
 # proportion of contributors will probably not be using Sublime Text
-# *.sublime-project
+*.sublime-project
 
 # SFTP configuration file
 sftp-config.json
