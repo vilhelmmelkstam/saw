@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='SAW',
     version='0.1',
-    packages=['SAW'],
+    packages=['SAW', 'scripts'],
     license='MIT License',
     description='SAW, a Python SimFin API Wrapper',
     long_description=open('README.md').read(),
@@ -12,8 +12,9 @@ setup(
     author_email='vilhelm.melkstam@gmail.com',
     entry_points='''
         [console_scripts]
-        saw=scripts:main
+        saw=scripts.saw:main
     ''',
+    install_requires=['peewee', 'requests'],
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
