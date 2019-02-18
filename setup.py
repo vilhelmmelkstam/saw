@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='SAW',
-    version='0.1',
+    version='0.1.1',
     packages=['SAW', 'scripts'],
     license='MIT License',
     description='SAW, a Python SimFin API Wrapper',
