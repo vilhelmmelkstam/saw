@@ -5,14 +5,14 @@ setup(
     version='0.1',
     packages=['SAW'],
     license='MIT License',
-    description='SAW, a Python SimFin API Wrapper'
+    description='SAW, a Python SimFin API Wrapper',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
     author='Vilhelm Melkstam',
     author_email='vilhelm.melkstam@gmail.com',
     entry_points='''
         [console_scripts]
-        saw=scripts/saw:main
+        saw=scripts:main
     ''',
     classifiers=[
         'License :: OSI Approved :: MIT License',
